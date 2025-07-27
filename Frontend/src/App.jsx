@@ -18,7 +18,7 @@ function App({ darkVeilRef }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [tokenLoading, setTokenLoading] = useState(false);
-  const [showFavourites, setShowFavourites] = useState(false);
+  const [showFavourites, setShowFavourites] = useState(true);
   const [favourites, setFavourites] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem('favourites')) || [];
@@ -125,9 +125,15 @@ function App({ darkVeilRef }) {
     setFavourites(favourites.filter((fav) => fav.id !== item.id));
   };
 
-  //todo
-  //1. change colours of buttons..
+  //
+  // todo
+  // 1. change colours of buttons..
   // green and purple is doesnt fit (eveyrhting else is black/white/grey/red)
+  //
+  // 2. increase opacity, too much trasnparancy makes it look kinda cheap?
+  //
+  // 3. if keep favourites in center, remove/fix text-truncate
+  // or do manuall css .. (text-overflow i think)
   return (
     <div className="app-container">
       <main className="container">

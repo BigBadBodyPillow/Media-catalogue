@@ -40,6 +40,7 @@ export default function FavouritesList({
                   >
                     <div className="d-flex align-items-center">
                       <img src={item.coverImage} alt={item.albumName} />
+                      {/* <span className="text-truncate"> */}
                       <span className="text-truncate">{item.albumName}</span>
                     </div>
                     <button

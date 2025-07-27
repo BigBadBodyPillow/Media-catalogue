@@ -40,17 +40,17 @@ main {
   font-size: 1rem;
   &:hover {
     /* background-color: rgb(123, 4, 32); */
-    color: rgb(177, 24, 47);
+    /* color: rgb(177, 24, 47); */
     background-color: var(--background_colour_hover);
     border-color: #888;
   }
   &:active,
   &:focus {
-    color: #333 !important;
-    background-color: rgb(177, 24, 47) !important;
-    /* background-color: rgb(123, 4, 32) !important; */
+    /* color: #333 !important; */
+    background-color: var(--background_colour_hover) !important;
+    /* background-color: rgb(177, 24, 47) !important; */
     border-color: #888 !important;
-    /* opacity: 0.8; */
+    opacity: 0.8;
   }
   &:disabled {
     background-color: var(--background_colour_hover);
@@ -266,11 +266,14 @@ i strongly dislike boostrap */
 }
 
 .favourites-container {
-  position: absolute;
-  right: 0;
-  top: 0;
+  /* idk if i like it more in the center or in the top right */
+  /* position: absolute; */
+  /* padding: 1rem; */
+  /* right: 0;
+  top: 0; */
+  padding: 0;
+  margin-bottom: 1rem;
   border-radius: 6px;
-  padding: 1rem;
   z-index: 2;
   min-width: 15rem;
 }
@@ -378,8 +381,6 @@ i strongly dislike boostrap */
 @media screen and (max-width: 1050px) {
   .favourites-container {
     position: initial;
-    padding: 0;
-    margin-bottom: 1rem;
   }
   .favourites-list span {
     width: 80%;

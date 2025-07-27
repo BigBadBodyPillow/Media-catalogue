@@ -72,6 +72,8 @@ A Fullstack application using the iTunes search API. Built with react and expres
    ```
    The app will open in your browser at `http://localhost:5173`
 
+
+## General? idk what to call this
 ### Dependencies
 
 - `express`: Web framework

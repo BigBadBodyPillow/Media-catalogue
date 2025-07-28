@@ -29,7 +29,7 @@ export default function SearchBar({
         <input
           type="text"
           className="form-control"
-          placeholder="Search for media..."
+          placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && onSearch()}

@@ -7,8 +7,9 @@ import SearchResults from './components/SearchResults.jsx';
 
 //css
 import './App.css';
+function App() {
+  // function App({ darkVeilRef }) {
 
-function App({ darkVeilRef }) {
   const [jwtToken, setJwtToken] = useState(
     localStorage.getItem('jwtToken') || ''
   );
@@ -62,16 +63,16 @@ function App({ darkVeilRef }) {
     localStorage.setItem('favourites', JSON.stringify(favourites));
   }, [favourites]);
 
-  const resizeDarkVeil = () => {
-    if (darkVeilRef?.current?.resize) {
-      // console.log('resizng');
-      darkVeilRef.current.resize();
-    }
-  };
+  // const resizeDarkVeil = () => {
+  //   if (darkVeilRef?.current?.resize) {
+  //     // console.log('resizng');
+  //     darkVeilRef.current.resize();
+  //   }
+  // };
 
-  useEffect(() => {
-    resizeDarkVeil();
-  });
+  // useEffect(() => {
+  //   resizeDarkVeil();
+  // });
 
   //fetch results from api
   const handleSearch = async () => {

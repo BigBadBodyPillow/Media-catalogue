@@ -109,28 +109,30 @@ main {
   /* maybe its just my ignorance but,
 i strongly dislike boostrap */
   --bs-body-bg: none;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.5) 50%,
-    var(--background_colour)
-  );
+    var(--background_colour) 50%,
+    var(--background_colour_hover)
+  ); */
   backdrop-filter: blur(10px);
   border: 1px solid var(--border_colour);
   color: var(--text_colour);
   box-sizing: border-box;
-  /* cursor: pointer; */
 
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  /* idk what i like better */
+  /* -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; */
+  -webkit-transition: none !important;
+  transition: none !important;
 
   &:hover {
     box-shadow: 0 0px 24px rgba(255, 255, 255, 0.1);
     transform: scale(1.05);
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       135deg,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0.7)
-    );
+      rgba(11, 11, 11, 0.5) 25%,
+      var(--background_colour)
+    ); */
   }
 }
 .result-head {
@@ -179,9 +181,6 @@ i strongly dislike boostrap */
   text-align: left;
   margin: 0 !important;
   max-width: var(--text_width_cutoff);
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
 }
 .card-text small {
   color: inherit;
@@ -278,9 +277,16 @@ i strongly dislike boostrap */
   min-width: 15rem;
 }
 .favourites-container .card {
+  --bs-body-bg: none; /*bootstrap colour*/
   color: var(--text_colour) !important;
   border: 1px solid var(--border_colour) !important;
   background-color: var(--background_colour) !important;
+
+  /* background-image: linear-gradient(
+    135deg,
+    rgba(11, 11, 11, 0.9) 25%,
+    var(--background_colour)
+  ); */
 }
 .favourites-container button {
   background-color: var(--background_colour_hover);
@@ -302,8 +308,12 @@ i strongly dislike boostrap */
 .favourite-item {
   color: var(--text_colour) !important;
   padding-inline: 0 !important;
-  background-color: var(--background_colour) !important;
   border-color: var(--border_colour) !important;
+
+  &:hover {
+    color: #b54dff;
+    background-color: rgba(11, 11, 11, 0.8);
+  }
 }
 .favourites-list span {
   width: var(--text_width_cutoff);

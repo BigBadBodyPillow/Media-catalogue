@@ -39,6 +39,14 @@ body {
   min-height: 100vh;
   background-color: var(--background_colour);
   color: var(--text_colour);
+
+  background: rgb(11, 11, 11);
+  background-image: linear-gradient(
+      rgba(31, 31, 31, 0.7) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, rgba(31, 31, 31, 0.7) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
 }
 
 h1 {
@@ -55,7 +63,13 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-color 0.25s; */
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+a {
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 button:hover {
   border-color: #646cff;

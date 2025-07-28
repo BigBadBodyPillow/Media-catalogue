@@ -11,20 +11,21 @@ import RainbowLine from './components/RainbowLine.jsx';
 // there was an issue where it wasnt resizing after the search results were loaded/updated.
 // theres still an issue now where if you zoom out and then reset the zoom
 // the height would remain as if you were zoomed out.
-import DarkVeil from './components/reactbits/DarkVeil.jsx';
+// import DarkVeil from './components/reactbits/DarkVeil.jsx';
 
 //CSS
 import './index.css';
 
 function AppWrapper() {
-  const darkVeilRef = useRef();
+  // const darkVeilRef = useRef();
 
   return (
     <StrictMode>
       <RainbowLine />
-      <App darkVeilRef={darkVeilRef} />
+      <App />
+      {/* <App darkVeilRef={darkVeilRef} /> */}
       {/* https://www.reactbits.dev/backgrounds/dark-veil */}
-      <DarkVeil
+      {/* <DarkVeil
         ref={darkVeilRef}
         hueShift={245}
         // this is a hard one, i like the noise but its dependant on the monitors refresh rate, so ill just leave it off
@@ -33,7 +34,7 @@ function AppWrapper() {
         speed={0.5}
         scanlineFrequency={10}
         warpAmount={0}
-      />
+      /> */}
     </StrictMode>
   );
 }

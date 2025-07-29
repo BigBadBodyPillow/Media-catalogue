@@ -27,8 +27,10 @@ export default function ResultItem({
             <p className="card-text">
               <small className="">
                 {item.releaseDate
-                  ? new Date(item.releaseDate).toLocaleDateString()
+                  ? new Date(item.releaseDate).toLocaleDateString('en-UK')
                   : ''}
+                {/* {item.releaseDate} */}
+                {/* {new Date(item.releaseDate).toLocaleDateString()} */}
               </small>
             </p>
           </div>

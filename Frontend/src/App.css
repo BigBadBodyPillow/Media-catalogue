@@ -9,6 +9,7 @@
 }
 #root {
   height: 100vh;
+  overflow-x: hidden;
 }
 .app-container {
   position: relative;
@@ -46,9 +47,7 @@ main {
   }
   &:active,
   &:focus {
-    /* color: #333 !important; */
     background-color: var(--background_colour_hover) !important;
-    /* background-color: rgb(177, 24, 47) !important; */
     border-color: #888 !important;
     opacity: 0.8;
   }
@@ -109,30 +108,30 @@ main {
   /* maybe its just my ignorance but,
 i strongly dislike boostrap */
   --bs-body-bg: none;
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     135deg,
-    var(--background_colour) 50%,
-    var(--background_colour_hover)
-  ); */
+    rgba(11, 11, 11, 0.8) 50%,
+    var(--background_colour)
+  );
   backdrop-filter: blur(10px);
   border: 1px solid var(--border_colour);
   color: var(--text_colour);
   box-sizing: border-box;
 
   /* idk what i like better */
-  /* -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; */
-  -webkit-transition: none !important;
-  transition: none !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* -webkit-transition: none !important;
+  transition: none !important; */
 
   &:hover {
     box-shadow: 0 0px 24px rgba(255, 255, 255, 0.1);
     transform: scale(1.05);
-    /* background-image: linear-gradient(
+    background-image: linear-gradient(
       135deg,
       rgba(11, 11, 11, 0.5) 25%,
       var(--background_colour)
-    ); */
+    );
   }
 }
 .result-head {
@@ -207,28 +206,31 @@ i strongly dislike boostrap */
   --view-on-itunes-color: #fa586a;
 
   &:hover {
-    color: var(--view-on-itunes-color) !important;
+    /* color: var(--view-on-itunes-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
     background-color: var(--view-on-itunes-color) !important;
-    color: #333 !important;
     border: 1px solid var(--view-on-itunes-color) !important;
   }
 }
 .add-favourite {
-  --add-favourite-color: #39ffca;
+  /* --add-favourite-color: #55ffd2; */
+  --add-favourite-color: #6b0015;
 
   &:hover {
-    color: var(--add-favourite-color) !important;
+    /* color: var(--add-favourite-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    color: #333 !important;
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
     border: 1px solid var(--add-favourite-color) !important;
     background-color: var(--add-favourite-color) !important;
   }
@@ -237,13 +239,14 @@ i strongly dislike boostrap */
   --remove-favourite-color: #b54dff;
 
   &:hover {
-    color: var(--remove-favourite-color) !important;
+    /* color: var(--remove-favourite-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    color: #333 !important;
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
     border: 1px solid var(--remove-favourite-color) !important;
     background-color: var(--remove-favourite-color) !important;
   }
@@ -256,12 +259,19 @@ i strongly dislike boostrap */
 
 .alert {
   border: 1px solid var(--border_colour) !important;
-  background-image: linear-gradient(
+  background-color: var(--background_colour) !important;
+  /* background-image: linear-gradient(
     135deg,
     rgba(7, 7, 7, 0.5) 50%,
     rgba(0, 0, 0, 0.5)
-  );
+  ); */
   color: rgba(255, 218, 218, 0.6) !important;
+}
+/* alert is shown when there are no favourites */
+#favouritesCollapse .alert {
+  border: 1px solid transparent !important;
+  background-color: transparent !important;
+  padding: 0 !important;
 }
 
 .favourites-container {
@@ -280,29 +290,30 @@ i strongly dislike boostrap */
   --bs-body-bg: none; /*bootstrap colour*/
   color: var(--text_colour) !important;
   border: 1px solid var(--border_colour) !important;
-  background-color: var(--background_colour) !important;
+  /* background-color: var(--background_colour) !important; */
 
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     135deg,
-    rgba(11, 11, 11, 0.9) 25%,
-    var(--background_colour)
-  ); */
+    rgba(11, 11, 11, 0.8),
+    var(--background_colour) 50%
+  );
 }
 .favourites-container button {
   background-color: var(--background_colour_hover);
   color: var(--text_colour);
-  /* border: 1px solid var(--border_colour); */
 
   &:hover {
-    color: #b54dff;
+    /* color: #b54dff; */
     background-color: var(--background_colour_hover);
   }
 
   &:active,
   &:focus {
-    color: #333 !important;
-    background-color: #b54dff !important;
-    border: 1px solid #b54dff !important;
+    color: var(--text_colour) !important;
+    background-color: #6b0015 !important;
+    /* background-color: #b54dff !important; */
+    border: 1px solid #6b0015 !important;
+    /* border: 1px solid #b54dff !important; */
   }
 }
 .favourite-item {
@@ -311,16 +322,17 @@ i strongly dislike boostrap */
   border-color: var(--border_colour) !important;
 
   &:hover {
-    color: #b54dff;
-    background-color: rgba(11, 11, 11, 0.8);
+    /* color: #b54dff; */
+    background-color: rgba(11, 11, 11, 0.4);
   }
 }
 .favourites-list span {
-  width: var(--text_width_cutoff);
+  --favourite_text_width_cutoff: 1000px;
+  width: var(--favourite_text_width_cutoff) !important;
   text-align: left;
-  /* white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
 }
 .favourite-item img {
   width: 32px;
@@ -335,15 +347,18 @@ i strongly dislike boostrap */
   /* background-color: crimson; */
 
   &:hover {
-    color: crimson;
+    /* color: crimson; */
     background-color: var(--background_colour_hover);
+    opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    color: #333 !important;
-    background-color: crimson !important;
-    border: 1px solid crimson !important;
+    color: var(--text_colour) !important;
+    background-color: #6b0015 !important;
+    /* background-color: crimson !important; */
+    border: 1px solid #6b0015 !important;
+    /* border: 1px solid crimson !important; */
   }
 }
 
@@ -353,10 +368,16 @@ i strongly dislike boostrap */
   :root {
     --text_width_cutoff: 220px;
   }
+  .favourites-list span {
+    --favourite_text_width_cutoff: 880px;
+  }
 }
 @media screen and (max-width: 1200px) {
   :root {
     --text_width_cutoff: 180px;
+  }
+  .favourites-list span {
+    --favourite_text_width_cutoff: 600px;
   }
 }
 
@@ -364,6 +385,9 @@ i strongly dislike boostrap */
 @media screen and (max-width: 765px) {
   :root {
     --text_width_cutoff: 360px;
+  }
+  .favourites-list span {
+    --favourite_text_width_cutoff: 600px;
   }
 }
 @media screen and (max-width: 550px) {

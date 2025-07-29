@@ -19,7 +19,10 @@ export default function FavouritesList({
             aria-expanded="false"
             aria-controls="favouritesCollapse"
           >
+            {/* need icon i think */}
             {showFavourites ? 'close' : 'open'}
+            {/* {showFavourites ? 'x' : '+'} */}
+            {/* {showFavourites ? '-' : '+'} */}
           </button>
         </div>
         <div
@@ -27,6 +30,7 @@ export default function FavouritesList({
           id="favouritesCollapse"
         >
           <div className="card-body">
+            {/* if there are no favourites show the alert */}
             {favourites.length === 0 ? (
               <div className="alert alert-secondary text-center">
                 No favourites yet.
@@ -40,8 +44,11 @@ export default function FavouritesList({
                   >
                     <div className="d-flex align-items-center">
                       <img src={item.coverImage} alt={item.albumName} />
-                      {/* <span className="text-truncate"> */}
-                      <span className="text-truncate">{item.albumName}</span>
+                      {/* if there is no albumname show the trackName */}
+                      {/* not sure if there will be many cases but this was to solve a specific error with the lil peep documentory */}
+                      <span className="text-truncate">
+                        {item.albumName ? item.albumName : item.trackName}
+                      </span>
                     </div>
                     <button
                       className="btn btn-sm"

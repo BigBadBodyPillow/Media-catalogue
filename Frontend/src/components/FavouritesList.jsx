@@ -1,3 +1,12 @@
+import React from 'react';
+
+// icon
+import BinIcon from '../assets/BinIcon.jsx';
+import Favourite from '../assets/Bookmark.jsx';
+
+//css
+import '../styles/FavouritesList.css';
+
 export default function FavouritesList({
   favourites,
   showFavourites,
@@ -10,8 +19,12 @@ export default function FavouritesList({
       <div className="card">
         <div className="card-header d-flex justify-content-between align-items-center">
           <h5 className="mb-0">Favourites</h5>
+
+          {/* opened/closed classes is to change the svg fill when its opened */}
           <button
-            className="btn btn-sm"
+            className={`btn btn-sm favourite-toggle-button ${
+              showFavourites ? 'opened' : 'closed'
+            }`}
             onClick={() => setShowFavourites(!showFavourites)}
             type="button"
             data-bs-toggle="collapse"
@@ -20,7 +33,8 @@ export default function FavouritesList({
             aria-controls="favouritesCollapse"
           >
             {/* need icon i think */}
-            {showFavourites ? 'close' : 'open'}
+            <Favourite />
+            {/* {showFavourites ? 'close' : 'open'} */}
             {/* {showFavourites ? 'x' : '+'} */}
             {/* {showFavourites ? '-' : '+'} */}
           </button>
@@ -43,18 +57,27 @@ export default function FavouritesList({
                     key={item.id}
                   >
                     <div className="d-flex align-items-center">
-                      <img src={item.coverImage} alt={item.albumName} />
-                      {/* if there is no albumname show the trackName */}
-                      {/* not sure if there will be many cases but this was to solve a specific error with the lil peep documentory */}
+                      <img
+                        src={item.coverImage}
+                        alt={item.albumName}
+                        draggable="false"
+                      />
+
                       <span className="text-truncate">
-                        {item.albumName ? item.albumName : item.trackName}
+                        {/* not sure if there will be many cases but this was to solve a specific error with the lil peep documentory */}
+                        {/* if there is no trackname then show the album name */}
+                        {item.trackName !== ''
+                          ? item.trackName
+                          : item.albumName}
                       </span>
                     </div>
+
                     <button
-                      className="btn btn-sm"
+                      className="btn btn-sm remove-button"
                       onClick={() => removeFavourite(item)}
                     >
-                      Remove
+                      {/* Remove */}
+                      <BinIcon />
                     </button>
                   </li>
                 ))}

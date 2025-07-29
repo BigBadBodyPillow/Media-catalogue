@@ -1,3 +1,6 @@
+//css
+import '../styles/ResultItem.css';
+
 export default function ResultItem({
   item,
   isFavourite,

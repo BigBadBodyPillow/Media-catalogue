@@ -1,0 +1,80 @@
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.search-container button {
+  /* background-color: rgb(92, 8, 18); */
+
+  background-color: var(--background_colour_hover);
+  color: var(--text_colour);
+  border: 1px solid var(--border_colour);
+  padding: 0.5em;
+  border-radius: 6px;
+  font-size: 1rem;
+  &:hover {
+    /* background-color: rgb(123, 4, 32); */
+    /* color: rgb(177, 24, 47); */
+    background-color: var(--background_colour_hover);
+    border-color: #888;
+  }
+  &:active,
+  &:focus {
+    background-color: var(--background_colour_hover) !important;
+    border-color: #888 !important;
+    opacity: 0.8;
+  }
+  &:disabled {
+    background-color: var(--background_colour_hover);
+    color: var(--text_colour);
+    border: 1px solid var(--border_colour);
+    opacity: 0.5;
+  }
+}
+.search-container .input-group {
+  width: max-content;
+}
+.search-container .input-group input {
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 50%,
+    var(--background_colour)
+  );
+}
+.search-container .input-group input,
+.search-container .input-group select {
+  /* width: max-content; */
+  flex: 1;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid var(--border_colour);
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  &:hover {
+    border-color: #888;
+  }
+}
+
+.search-container .input-group select {
+  cursor: pointer;
+  background-color: var(--background_colour);
+  color: var(--text_colour);
+  border: 1px solid var(--border_colour);
+  padding: 0.5em;
+  border-radius: 6px;
+  font-size: 1rem;
+  appearance: none; /* Removes native styling in some browsers */
+  transition: all 0.3s ease;
+}
+
+.search-container .input-group select option {
+  background-color: var(--background_colour);
+  color: var(--text_colour);
+}

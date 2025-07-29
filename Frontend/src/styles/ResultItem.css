@@ -1,0 +1,155 @@
+.result.card {
+  /* maybe its just my ignorance but,
+i strongly dislike boostrap */
+  --bs-body-bg: none;
+  background-image: linear-gradient(
+    135deg,
+    rgba(11, 11, 11, 0.8) 50%,
+    var(--background_colour)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border_colour);
+  color: var(--text_colour);
+  box-sizing: border-box;
+
+  /* idk what i like better */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* -webkit-transition: none !important;
+  transition: none !important; */
+
+  &:hover {
+    box-shadow: 0 0px 24px rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    background-image: linear-gradient(
+      135deg,
+      rgba(11, 11, 11, 0.5) 25%,
+      var(--background_colour)
+    );
+  }
+}
+
+.result-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.result-image {
+  /* image sizes from api can either be 30, 60 or 100. */
+  /* backend for fetches 100- the largest. making the image anybigger with css */
+  /* makes it look really bad */
+  /* https://tenor.com/en-GB/view/tony-stark-limited-tech-meme-technology-gif-10681570624129307805 */
+  box-sizing: border-box;
+  max-width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+
+  /* from bootstrap */
+  /* border-top-left-radius: calc(0.375rem - (1px)); */
+  border-radius: calc(0.375rem - (1px));
+}
+.result-card-body {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.card-body {
+  color: var(--text_colour);
+  box-sizing: border-box;
+}
+.result-card-title {
+  max-width: var(--text_width_cutoff);
+  /* text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  margin: 0;
+}
+.result-artist-name {
+  text-align: left;
+  margin: 0 !important;
+  max-width: var(--text_width_cutoff);
+}
+.card-text small {
+  color: inherit;
+  opacity: 0.6;
+}
+.result-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0.25rem;
+}
+.view-on-itunes,
+.add-favourite,
+.remove-favourite {
+  color: var(--text_colour) !important;
+  background-color: var(--background_colour_hover) !important;
+}
+
+/* now that im looking at it, all this nesting looks kinda ugly */
+/* but thats later mes' problem */
+.view-on-itunes {
+  --view-on-itunes-color: #fa586a;
+
+  &:hover {
+    /* color: var(--view-on-itunes-color) !important; */
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
+    background-color: var(--view-on-itunes-color) !important;
+    border: 1px solid var(--view-on-itunes-color) !important;
+  }
+}
+.add-favourite {
+  /* --add-favourite-color: #55ffd2; */
+  --add-favourite-color: #6b0015;
+
+  &:hover {
+    /* color: var(--add-favourite-color) !important; */
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
+    border: 1px solid var(--add-favourite-color) !important;
+    background-color: var(--add-favourite-color) !important;
+  }
+}
+.remove-favourite {
+  /* --remove-favourite-color: #b54dff; */
+  --remove-favourite-color: #6b0015;
+
+  &:hover {
+    /* color: var(--remove-favourite-color) !important; */
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    /* color: #333 !important; */
+    color: var(--text_colour) !important;
+    border: 1px solid var(--remove-favourite-color) !important;
+    background-color: var(--remove-favourite-color) !important;
+  }
+}
+
+.result-button-container .btn {
+  flex: 1;
+  margin: 0 !important;
+}

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+//css
+import '../styles/SearchBar.css';
+
 // for select box (value is used for the search api)
 const MEDIA_TYPES = [
   { value: 'all', label: 'All' },

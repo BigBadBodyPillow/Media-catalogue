@@ -2,8 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import FavouritesList from '../FavouritesList';
 
-// coverage test says the class toggle is not tested,
-//  i dont know how to test that, but it is obviously working
+// coverage test says the class toggle is not tested, but it is obviously working(the svg fill changes)
 describe('FavouritesList Component', () => {
   const mockFavourites = [
     {

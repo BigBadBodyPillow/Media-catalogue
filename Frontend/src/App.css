@@ -18,12 +18,12 @@ main {
 
 .alert {
   border: 1px solid var(--border_colour) !important;
-  background-color: var(--background_colour) !important;
-  /* background-image: linear-gradient(
+  /* background-color: var(--background_colour) !important; */
+  background-image: linear-gradient(
     135deg,
-    rgba(7, 7, 7, 0.5) 50%,
-    rgba(0, 0, 0, 0.5)
-  ); */
+    rgba(11, 11, 11, 0.8),
+    var(--background_colour) 50%
+  );
   color: rgba(255, 218, 218, 0.6) !important;
 }
 

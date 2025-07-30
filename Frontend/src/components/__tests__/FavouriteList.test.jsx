@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import FavouritesList from '../FavouritesList';
 
+// coverage test says the class toggle is not tested,
+//  i dont know how to test that, but it is obviously working
 describe('FavouritesList Component', () => {
   const mockFavourites = [
     {
@@ -92,5 +94,28 @@ describe('FavouritesList Component', () => {
 
     // initial state is true, false means its closed
     expect(mockSetShowFavourites).toHaveBeenCalledWith(false);
+  });
+
+  // show album name if no trackanme
+  it('should display albumName if trackName is not present', () => {
+    const mockFavourites = [
+      {
+        id: 1,
+        trackName: '',
+        albumName: 'Album 1',
+        coverImage: 'image1.jpg',
+      },
+    ];
+
+    render(
+      <FavouritesList
+        favourites={mockFavourites}
+        showFavourites={true}
+        setShowFavourites={mockSetShowFavourites}
+        removeFavourite={mockRemoveFavourite}
+      />
+    );
+
+    expect(screen.getByText('Album 1')).toBeInTheDocument();
   });
 });

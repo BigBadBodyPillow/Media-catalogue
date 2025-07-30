@@ -19,13 +19,14 @@ export default function ResultItem({
           />
           <div className="result-card-body">
             <h6 className="result-card-title text-truncate">
+              {/* if there is no track name then show the album name */}
               {item.trackName !== '' ? item.trackName : item.albumName}
             </h6>
             <p className="result-artist-name text-truncate">
               {item.artistName}
             </p>
             <p className="card-text">
-              <small className="">
+              <small>
                 {item.releaseDate
                   ? new Date(item.releaseDate).toLocaleDateString('en-UK')
                   : ''}

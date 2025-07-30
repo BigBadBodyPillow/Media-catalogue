@@ -17,15 +17,16 @@ import DarkVeil from './components/reactbits/DarkVeil.jsx';
 import './index.css';
 
 function AppWrapper() {
-  const darkVeilRef = useRef();
+  // const darkVeilRef = useRef();
 
   return (
     <StrictMode>
       <RainbowLine />
-      <App darkVeilRef={darkVeilRef} />
+      {/* <App darkVeilRef={darkVeilRef} /> */}
+      <App />
       {/* https://www.reactbits.dev/backgrounds/dark-veil */}
       <DarkVeil
-        ref={darkVeilRef}
+        // ref={darkVeilRef}
         hueShift={245}
         // this is a hard one, i like the noise but its dependant on the monitors refresh rate, so ill just leave it off
         noiseIntensity={0}

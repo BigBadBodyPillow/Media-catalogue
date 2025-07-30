@@ -105,4 +105,55 @@ describe('ResultItem Component', () => {
     fireEvent.click(removeButton);
     expect(mockRemoveFavourite).toHaveBeenCalledWith(mockItem);
   });
+
+  //test no trackname
+  it('Should display the album name if no trackname is present', () => {
+    // no trackname
+    const mockItem = {
+      id: 1,
+      trackName: '',
+      albumName: 'Test Album',
+      artistName: 'Test Artist',
+      coverImage: 'test.jpg',
+      releaseDate: '22/33/4444',
+      collectionViewUrl: 'https://example.com',
+    };
+
+    render(
+      <ResultItem
+        item={mockItem}
+        isFavourite={mockIsFavourite}
+        addFavourite={mockAddFavourite}
+        removeFavourite={mockRemoveFavourite}
+      />
+    );
+
+    // test track wont be in the document because test test album would be
+    expect(screen.queryByText('Test Track')).not.toBeInTheDocument();
+    expect(screen.queryByText('Test Album')).toBeInTheDocument();
+  });
+
+  // test if no date
+  it('should not display a date if there is not date', () => {
+    const mockItem = {
+      id: 1,
+      trackName: 'Test Track',
+      albumName: 'Test Album',
+      artistName: 'Test Artist',
+      coverImage: 'test.jpg',
+      releaseDate: '',
+      collectionViewUrl: 'https://example.com',
+    };
+
+    render(
+      <ResultItem
+        item={mockItem}
+        isFavourite={mockIsFavourite}
+        addFavourite={mockAddFavourite}
+        removeFavourite={mockRemoveFavourite}
+      />
+    );
+
+    expect(screen.queryByText('22/33/4444')).not.toBeInTheDocument();
+  });
 });

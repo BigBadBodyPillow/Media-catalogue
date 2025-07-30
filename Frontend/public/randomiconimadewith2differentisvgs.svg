@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 200 100 100" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" path="music_2_fill.svg"/>
+    </bx:export>
+  </defs>
+  <title>music_2_fill</title>
+  <g id="Interface / Search_Magnifying_Glass" transform="matrix(4.829646, 0, 0, 4.829646, 92.541985, 192.541031)" style="">
+    <path id="Vector" d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="paint-order: stroke; fill: rgba(255, 0, 0, 0); stroke: rgb(137, 4, 4);"/>
+  </g>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M 143.657 256.006 L 143.657 229.223 M 143.657 256.006 C 143.657 258.982 141.483 264.934 132.784 264.934 C 124.086 264.934 121.909 258.982 121.909 256.006 C 121.909 253.03 124.086 247.078 132.784 247.078 C 141.483 247.078 143.657 253.03 143.657 256.006 Z M 143.663 229.223 L 143.657 217.321 L 158.155 217.321 L 158.155 229.223 L 143.663 229.223 Z" style="stroke: rgb(137, 4, 4); fill: rgb(137, 4, 4); stroke-width: 6px;"/>
+</svg>

@@ -16,7 +16,7 @@ A Fullstack application using the iTunes search API. Built with react and expres
 2. Access favourites via the collapsible favourites panel
 3. Remove items using the "Remove" button in the favourites list or the "Remove Favourite" button in the search result
 
-## Installation
+## Installation (use locally)
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ A Fullstack application using the iTunes search API. Built with react and expres
 
    ```
    JWT_SECRET=<enter_your_secret_key>
-   PORT=<enter_port>
+   PORT=<enter_port> #optional
    ```
 
 - default port is `3000` if you change the port you might have to change the port in `vite.config.js` in the `Frontend` directory aswell
@@ -60,10 +60,8 @@ A Fullstack application using the iTunes search API. Built with react and expres
 
    ```cmd
    cd Backend
-   npm start
+   npm run dev
    ```
-
-   The server will run on `http://localhost:5000`
 
 6. **Start the Frontend Development Server**
    ```bash
@@ -72,58 +70,12 @@ A Fullstack application using the iTunes search API. Built with react and expres
    ```
    The app will open in your browser at `http://localhost:5173`
 
-## General? idk what to call this
-
-### Dependencies
-
-- `express`: Web framework
-- `cors`: Cross-origin resource sharing
-- `jsonwebtoken`: JWT token handling
-- `dotenv`: Environment variable management
-
-#### development
-
-- `nodemon`: Automatic server refreshing
-
-### Backend Endpoints
-
-#### `GET /api/token`
-
-- generates a new api token
-- token expires after an hour
-
-#### `GET /api/search`
-
-- searches the [iTunes search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
-- fetches 25 results (limit can be changed)
-- returns: `id`,`albumName`,`trackName`, `ArtistName`, `coverImage`, `releaseDate`, `kind`, `collectionViewUrl`
-
-### Frontend Components
-
-#### SearchBar
-
-- Handles search input, media type selection, and search button
-
-#### FavouritesList
-
-- Collapsible favourites section with add/remove functionality
-
-#### ResultItem
-
-- Individual search result display
-
-#### SearchResults
-
-- Container for displaying search results
-
-#### RainbowLine
-
-- A `1px` tall rainbow Line
-
-## Links
+## credits?
 
 API: [iTunes search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 
 Background : [React Bits](https://www.reactbits.dev/)
 
 Documentation: [readme.so](https://readme.so/editor)
+
+Icons: [SVG Repo](https://www.svgrepo.com/)

@@ -32,7 +32,6 @@ export default function FavouritesList({
             aria-expanded="false"
             aria-controls="favouritesCollapse"
           >
-            {/* need icon i think */}
             <Favourite />
             {/* {showFavourites ? 'close' : 'open'} */}
             {/* {showFavourites ? 'x' : '+'} */}
@@ -76,7 +75,6 @@ export default function FavouritesList({
                       className="btn btn-sm remove-button"
                       onClick={() => removeFavourite(item)}
                     >
-                      {/* Remove */}
                       <BinIcon />
                     </button>
                   </li>

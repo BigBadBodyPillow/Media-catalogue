@@ -16,6 +16,7 @@ describe('SearchBar Component', () => {
       jwtToken: 'mock-token',
       tokenLoading: false,
     };
+
     render(<SearchBar {...mockProps} />);
     const inputElement = screen.getByPlaceholderText('Search...');
     expect(inputElement).toBeInTheDocument();
@@ -34,9 +35,13 @@ describe('SearchBar Component', () => {
       jwtToken: 'mock-token',
       tokenLoading: false,
     };
+
     render(<SearchBar {...mockProps} />);
+
+    //input text into search abr
     const inputElement = screen.getByPlaceholderText('Search...');
     fireEvent.change(inputElement, { target: { value: 'test' } });
+
     expect(setSearchTerm).toHaveBeenCalledWith('test');
   });
 
@@ -53,9 +58,13 @@ describe('SearchBar Component', () => {
       jwtToken: 'mock-token',
       tokenLoading: false,
     };
+
     render(<SearchBar {...mockProps} />);
+
+    //trigger search
     const searchButton = screen.getByRole('button', { name: 'Search' });
     fireEvent.click(searchButton);
+
     expect(onSearch).toHaveBeenCalled();
   });
 });

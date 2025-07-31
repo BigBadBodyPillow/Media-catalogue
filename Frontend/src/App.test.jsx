@@ -24,7 +24,6 @@ describe('App Component', () => {
   });
 
   it('should display search results after a successful search', async () => {
-    // for token
     mockFetch
       .mockResolvedValueOnce({
         json: () => Promise.resolve({ token: 'mock-jwt-token' }),
@@ -74,6 +73,7 @@ describe('App Component', () => {
 
     render(<App />);
 
+    //in alert
     await waitFor(() => {
       expect(screen.getByText('Failed to get API token')).toBeInTheDocument();
     });
@@ -115,6 +115,7 @@ describe('App Component', () => {
     });
   });
 
+  // when status is not okay and not 403
   it('should handle non-OK response from API', async () => {
     mockFetch
       .mockResolvedValueOnce({
@@ -239,7 +240,7 @@ describe('App Component', () => {
     fireEvent.change(searchInput, { target: { value: 'Test' } });
     fireEvent.click(searchButton);
 
-    // Wait for search results to appear
+    // search results
     await waitFor(() => {
       expect(screen.getByText('Test Track')).toBeInTheDocument();
     });
@@ -352,7 +353,7 @@ describe('App Component', () => {
   });
 
   //test favourite state if local storage is NOT empty
-  it('favourite state should be set to local storage if not empty', () => {
+  it('favourite state should be set to item in local storage if not empty', () => {
     const mockFavourites = [
       {
         id: 1,

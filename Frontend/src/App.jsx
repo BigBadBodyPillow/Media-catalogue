@@ -28,20 +28,22 @@ function App() {
     }
   });
 
-  // Fetch JWT token on first load if not present
+  // if no jwt, get one
   useEffect(() => {
     if (!jwtToken) {
       fetchToken();
     }
   }, [jwtToken]);
 
-  // generate new token and add to localstorage
+  // generate token and add to localstorage
   const fetchToken = async () => {
     setTokenLoading(true);
     try {
       const res = await fetch('/api/token');
       const data = await res.json();
+
       setJwtToken(data.token);
+
       localStorage.setItem('jwtToken', data.token);
     } catch (err) {
       setError('Failed to get API token');
@@ -126,15 +128,6 @@ function App() {
     setFavourites(favourites.filter((fav) => fav.id !== item.id));
   };
 
-  //
-  // todo
-  // 1. change colours of buttons..
-  // green and purple is doesnt fit (eveyrhting else is black/white/grey/red)
-  //
-  // 2. increase opacity, too much trasnparancy makes it look kinda cheap?
-  //
-  // 3. if keep favourites in center, remove/fix text-truncate
-  // or do manuall css .. (text-overflow i think)
   return (
     <div className="app-container">
       <main className="container">

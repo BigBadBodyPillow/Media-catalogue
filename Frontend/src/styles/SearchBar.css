@@ -7,8 +7,6 @@
   margin-top: 1rem;
 }
 .search-container button {
-  /* background-color: rgb(92, 8, 18); */
-
   background-color: var(--background_colour_hover);
   color: var(--text_colour);
   border: 1px solid var(--border_colour);
@@ -16,8 +14,6 @@
   border-radius: 6px;
   font-size: 1rem;
   &:hover {
-    /* background-color: rgb(123, 4, 32); */
-    /* color: rgb(177, 24, 47); */
     background-color: var(--background_colour_hover);
     border-color: #888;
   }
@@ -46,7 +42,6 @@
 }
 .search-container .input-group input,
 .search-container .input-group select {
-  /* width: max-content; */
   flex: 1;
   background-color: inherit;
   color: inherit;
@@ -70,7 +65,7 @@
   padding: 0.5em;
   border-radius: 6px;
   font-size: 1rem;
-  appearance: none; /* Removes native styling in some browsers */
+  appearance: none;
   transition: all 0.3s ease;
 }
 

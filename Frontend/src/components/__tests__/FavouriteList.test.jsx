@@ -30,6 +30,9 @@ describe('FavouritesList Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
+    expect(screen.getByText('Track 1')).toBeInTheDocument();
+    expect(screen.getByText('Track 2')).toBeInTheDocument();
   });
 
   //   empty favourite list
@@ -42,6 +45,7 @@ describe('FavouritesList Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('No favourites yet.')).toBeInTheDocument();
   });
 
@@ -55,6 +59,7 @@ describe('FavouritesList Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('Track 1')).toBeInTheDocument();
     expect(screen.getByText('Track 2')).toBeInTheDocument();
   });

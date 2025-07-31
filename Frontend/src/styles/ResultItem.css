@@ -15,8 +15,6 @@ i strongly dislike boostrap */
   /* idk what i like better */
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  /* -webkit-transition: none !important;
-  transition: none !important; */
 
   &:hover {
     box-shadow: 0 0px 24px rgba(255, 255, 255, 0.1);
@@ -66,10 +64,6 @@ i strongly dislike boostrap */
 }
 .result-card-title {
   max-width: var(--text_width_cutoff);
-  /* text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
   margin: 0;
 }
 .result-artist-name {
@@ -96,53 +90,43 @@ i strongly dislike boostrap */
   background-color: var(--background_colour_hover) !important;
 }
 
-/* now that im looking at it, all this nesting looks kinda ugly */
-/* but thats later mes' problem */
 .view-on-itunes {
   --view-on-itunes-color: #fa586a;
 
   &:hover {
-    /* color: var(--view-on-itunes-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    /* color: #333 !important; */
     color: var(--text_colour) !important;
     background-color: var(--view-on-itunes-color) !important;
     border: 1px solid var(--view-on-itunes-color) !important;
   }
 }
 .add-favourite {
-  /* --add-favourite-color: #55ffd2; */
   --add-favourite-color: #6b0015;
 
   &:hover {
-    /* color: var(--add-favourite-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    /* color: #333 !important; */
     color: var(--text_colour) !important;
     border: 1px solid var(--add-favourite-color) !important;
     background-color: var(--add-favourite-color) !important;
   }
 }
 .remove-favourite {
-  /* --remove-favourite-color: #b54dff; */
   --remove-favourite-color: #6b0015;
 
   &:hover {
-    /* color: var(--remove-favourite-color) !important; */
     opacity: 0.8;
   }
 
   &:active,
   &:focus {
-    /* color: #333 !important; */
     color: var(--text_colour) !important;
     border: 1px solid var(--remove-favourite-color) !important;
     background-color: var(--remove-favourite-color) !important;

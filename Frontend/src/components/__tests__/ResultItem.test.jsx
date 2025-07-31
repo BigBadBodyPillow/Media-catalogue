@@ -41,6 +41,7 @@ describe('ResultItem Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('Test Track')).toBeInTheDocument();
     expect(screen.getByText('Test Artist')).toBeInTheDocument();
     expect(screen.getByText('22/33/4444')).toBeInTheDocument();
@@ -57,6 +58,7 @@ describe('ResultItem Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('Add to Favourites')).toBeInTheDocument();
   });
 
@@ -71,6 +73,7 @@ describe('ResultItem Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('Remove Favourite')).toBeInTheDocument();
   });
 
@@ -85,6 +88,7 @@ describe('ResultItem Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     const addButton = screen.getByText('Add to Favourites');
     fireEvent.click(addButton);
     expect(mockAddFavourite).toHaveBeenCalledWith(mockItem);
@@ -101,6 +105,7 @@ describe('ResultItem Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     const removeButton = screen.getByText('Remove Favourite');
     fireEvent.click(removeButton);
     expect(mockRemoveFavourite).toHaveBeenCalledWith(mockItem);

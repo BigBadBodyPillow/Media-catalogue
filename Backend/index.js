@@ -4,7 +4,6 @@ const express = require('express');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const path = require('path');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET;

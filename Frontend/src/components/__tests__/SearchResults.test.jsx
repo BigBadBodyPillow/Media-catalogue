@@ -19,6 +19,7 @@ describe('SearchResults Component', () => {
       releaseDate: '2025/07/29',
     },
   ];
+
   const mockIsFavourite = vi.fn();
   const mockAddFavourite = vi.fn();
   const mockRemoveFavourite = vi.fn();
@@ -46,6 +47,7 @@ describe('SearchResults Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(
       screen.getByText(
         'an error message that would probably be about the jwt token'
@@ -64,6 +66,7 @@ describe('SearchResults Component', () => {
         removeFavourite={mockRemoveFavourite}
       />
     );
+
     expect(screen.getByText('Track 1')).toBeInTheDocument();
     expect(screen.getByText('Track 2')).toBeInTheDocument();
   });

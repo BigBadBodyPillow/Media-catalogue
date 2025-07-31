@@ -1,8 +1,5 @@
 import ResultItem from './ResultItem.jsx';
 
-//css
-import '../styles/SearchResults.css';
-
 export default function SearchResults({
   results,
   error,

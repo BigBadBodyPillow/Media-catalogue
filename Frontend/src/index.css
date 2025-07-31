@@ -33,6 +33,7 @@ a:hover {
 }
 
 body {
+  --bs-body-color: var(--text_colour) !important;
   margin: 0;
   display: flex;
   place-items: center;
@@ -44,11 +45,11 @@ body {
   /* grid - for if i choose not to use darkveil*/
   /* background: rgb(11, 11, 11);
   background-image: linear-gradient(
-      rgba(31, 31, 31, 0.7) 0.1em,
-      transparent 0.1em
+    rgba(31, 31, 31, 0.7) 0.1em,
+    transparent 0.1em
     ),
     linear-gradient(90deg, rgba(31, 31, 31, 0.7) 0.1em, transparent 0.1em);
-  background-size: 3em 3em; */
+    background-size: 3em 3em; */
 }
 
 h1 {

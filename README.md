@@ -76,6 +76,4 @@ API: [iTunes search API](https://developer.apple.com/library/archive/documentati
 
 Background : [React Bits](https://www.reactbits.dev/)
 
-Documentation: [readme.so](https://readme.so/editor)
-
 Icons: [SVG Repo](https://www.svgrepo.com/)

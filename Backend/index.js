@@ -13,27 +13,32 @@ const JWT_SECRET = process.env.JWT_SECRET;
 app.use(cors());
 app.use(express.json());
 
-// JWT middleware
+// JWT
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
+
   if (!token) return res.sendStatus(401);
+
   jwt.verify(token, JWT_SECRET, (err, user) => {
     if (err) return res.sendStatus(403);
+
     req.user = user;
     next();
   });
 }
 
-// jwttoken
+// generate token
 app.get('/api/token', (req, res) => {
   const token = jwt.sign({}, JWT_SECRET, { expiresIn: '1h' });
+
   res.json({ token });
 });
 
-//itunes search
+// search with itunes api
 app.get('/api/search', authenticateToken, async (req, res) => {
   const { term, media } = req.query;
+
   if (!term) {
     return res.status(400).json({ error: 'Search term is required.' });
   }
@@ -59,15 +64,18 @@ app.get('/api/search', authenticateToken, async (req, res) => {
       kind: item.kind || item.wrapperType,
       collectionViewUrl: item.collectionViewUrl || item.trackViewUrl,
     }));
+
     res.json({ results });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch from iTunes API.' });
   }
 });
 
+// static files from build
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../Frontend/dist')));
-  app.get('*', (req, res) => {
+  // app.get('/*', (req, res) => {
+  app.use((req, res) => {
     res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
   });
 }

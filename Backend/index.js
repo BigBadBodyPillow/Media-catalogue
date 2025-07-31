@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET;
 //const JWT_SECRET = 'randomSecretKeyidk123' ;
 
@@ -73,10 +73,10 @@ app.get('/api/search', authenticateToken, async (req, res) => {
 
 // static files from build
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../Frontend/dist')));
+  app.use(express.static(path.join(__dirname, 'Frontend/dist')));
   // app.get('/*', (req, res) => {
   app.use((req, res) => {
-    res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Frontend/dist', 'index.html'));
   });
 }
 

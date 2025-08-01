@@ -1,4 +1,4 @@
-import { StrictMode, useRef } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 
@@ -11,16 +11,12 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AppWrapper() {
-  // const darkVeilRef = useRef();
-
   return (
     <StrictMode>
       <RainbowLine />
-      {/* <App darkVeilRef={darkVeilRef} /> */}
       <App />
       {/* https://www.reactbits.dev/backgrounds/dark-veil */}
       <DarkVeil
-        // ref={darkVeilRef}
         hueShift={245}
         // i like the noise but its dependant on the monitors refresh rate, so ill just leave it off
         noiseIntensity={0}

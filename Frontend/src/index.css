@@ -21,7 +21,12 @@
   font-family: Space Grotesk;
   box-sizing: border-box;
 }
+*::selection {
+  color: var(--background_colour);
 
+  /* crimson with 0,8 opacity */
+  background-color: rgba(220, 20, 60, 0.8);
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -44,13 +49,14 @@ body {
   color: var(--text_colour);
 
   /* grid - for if i choose not to use darkveil*/
-  /* background: rgb(11, 11, 11);
+  /* --bs-body-bg: rgb(11, 11, 11) !important;
+  background: #333;
   background-image: linear-gradient(
-    rgba(31, 31, 31, 0.7) 0.1em,
-    transparent 0.1em
+      rgba(22, 22, 22, 0.7) 0.1em,
+      transparent 0.1em
     ),
-    linear-gradient(90deg, rgba(31, 31, 31, 0.7) 0.1em, transparent 0.1em);
-    background-size: 3em 3em; */
+    linear-gradient(90deg, rgba(22, 22, 22, 0.7) 0.1em, transparent 0.1em);
+  background-size: 3em 3em; */
 }
 
 h1 {

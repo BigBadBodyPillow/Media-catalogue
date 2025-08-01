@@ -4,7 +4,6 @@
 #root {
   height: 100vh;
   overflow-x: hidden;
-  /* background-color: black; */
   background-color: transparent;
 }
 .app-container {
@@ -28,8 +27,6 @@ main {
   color: rgba(255, 218, 218, 0.6) !important;
 }
 
-/* is it reasonable for responsiveness to break at 300px? */
-/* the smallest width on the devtools is 360px */
 @media screen and (max-width: 1400px) {
   :root {
     --text_width_cutoff: 220px;

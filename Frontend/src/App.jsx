@@ -7,9 +7,8 @@ import SearchResults from './components/SearchResults.jsx';
 
 //css
 import './App.css';
-function App() {
-  // function App({ darkVeilRef }) {
 
+function App() {
   const [jwtToken, setJwtToken] = useState(
     localStorage.getItem('jwtToken') || ''
   );
@@ -65,17 +64,6 @@ function App() {
     localStorage.setItem('favourites', JSON.stringify(favourites));
   }, [favourites]);
 
-  // const resizeDarkVeil = () => {
-  //   if (darkVeilRef?.current?.resize) {
-  //     // console.log('resizng');
-  //     darkVeilRef.current.resize();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   resizeDarkVeil();
-  // });
-
   //fetch results from api
   const handleSearch = async () => {
     if (!searchTerm.trim() || !jwtToken) return;
@@ -127,6 +115,19 @@ function App() {
   const removeFavourite = (item) => {
     setFavourites(favourites.filter((fav) => fav.id !== item.id));
   };
+
+  // todo maybe idk
+  //
+  //  ==change background==
+  //
+  // i like the dark veil but theres something about it
+  // if i look at it for too long it makes be feel "ehh" about it.
+  //
+  // but if i use a simple grid background with linear gradients it looks simply good but not great.
+  //
+  // a background that i do love is the particles one that i used as the stars in space for
+  // this project https://github.com/BigBadBodyPillow/event-manager
+  // but i dont want to use the same thing  again
 
   return (
     <div className="app-container">

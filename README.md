@@ -33,17 +33,23 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
    cd Media-catalogue
    ```
 
-2. **Install Backend Dependencies**
-
-   ```cmd
-   cd Backend
-   npm install
-   ```
-
-3. **Install Frontend Dependencies**
+2. **Install Frontend Dependencies**
 
    ```cmd
    cd ../Frontend
+   ```
+
+   ```cmd
+   npm install
+   ```
+
+3. **Install Backend Dependencies**
+
+   ```cmd
+   cd Backend
+   ```
+
+   ```cmd
    npm install
    ```
 
@@ -60,7 +66,6 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
 5. **Start the Backend Server**
 
    ```cmd
-   cd Backend
    npm run dev
    ```
 
@@ -68,6 +73,9 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
 
    ```cmd
    cd Frontend
+   ```
+
+   ```cmd
    npm run dev
    ```
 

@@ -16,14 +16,13 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
 
 1. Click "Add to Favourites" on any search result
 2. Access favourites via the collapsible favourites panel
-3. Remove items using the "Remove" button in the favourites list or the "Remove Favourite" button in the search result
+3. Remove items using the remove button(bin icon) in the favourites list or the "Remove Favourite" button in the search result
 
 ## Installation (use locally)
 
 ### Prerequisites
 
-- Node.js
-- npm
+[Node.js](https://nodejs.org/en)
 
 ### Installation
 
@@ -56,7 +55,7 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
    PORT=<enter_port> #optional
    ```
 
-- default port is `3000` if you change the port you might have to change the port in `vite.config.js` in the `Frontend` directory aswell
+   default port is `3000` if you change the port you might have to change the port in `vite.config.js` in the `Frontend` directory aswell
 
 5. **Start the Backend Server**
 
@@ -65,11 +64,13 @@ Live: [iTunesMedia.onrender.com](https://itunesmedia.onrender.com/)
    npm run dev
    ```
 
-6. **Start the Frontend Development Server**
-   ```bash
+6. **Start the Frontend** (open another terminal)
+
+   ```cmd
    cd Frontend
    npm run dev
    ```
+
    The app will open in your browser at `http://localhost:5173`
 
 ## credits?

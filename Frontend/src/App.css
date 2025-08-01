@@ -4,6 +4,8 @@
 #root {
   height: 100vh;
   overflow-x: hidden;
+  /* background-color: black; */
+  background-color: transparent;
 }
 .app-container {
   position: relative;

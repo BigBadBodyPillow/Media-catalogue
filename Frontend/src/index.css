@@ -34,6 +34,7 @@ a:hover {
 
 body {
   --bs-body-color: var(--text_colour) !important;
+  --bs-body-bg: black !important;
   margin: 0;
   display: flex;
   place-items: center;
@@ -95,4 +96,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.dark-veil.active {
+  display: none !important;
 }

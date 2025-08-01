@@ -15,7 +15,7 @@ export default function ResultItem({
             src={item.coverImage}
             className="result-image"
             draggable={false}
-            alt={item.albumName}
+            alt={`image of ${item.albumName} cover`}
           />
           <div className="result-card-body">
             <h6 className="result-card-title text-truncate">

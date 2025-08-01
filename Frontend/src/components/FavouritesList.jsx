@@ -14,7 +14,7 @@ export default function FavouritesList({
   removeFavourite,
 }) {
   return (
-    <div className="favourites-container">
+    <section className="favourites-container">
       {/* okay bootstrap is kinda nices but  it makes the html look too messy in my opinion */}
       <div className="card">
         <div className="card-header d-flex justify-content-between align-items-center">
@@ -29,6 +29,7 @@ export default function FavouritesList({
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#favouritesCollapse"
+            aria-label={`${showFavourites ? 'close' : 'open'} favourites list `}
             aria-expanded="false"
             aria-controls="favouritesCollapse"
           >
@@ -74,6 +75,7 @@ export default function FavouritesList({
                     <button
                       className="btn btn-sm remove-button"
                       onClick={() => removeFavourite(item)}
+                      aria-label="Remove from favourites"
                     >
                       <BinIcon />
                     </button>
@@ -84,6 +86,6 @@ export default function FavouritesList({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

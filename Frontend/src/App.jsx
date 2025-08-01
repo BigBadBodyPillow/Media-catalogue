@@ -157,15 +157,13 @@ function App() {
           removeFavourite={removeFavourite}
         />
 
-        <div className="row">
-          <SearchResults
-            results={results}
-            error={error}
-            isFavourite={isFavourite}
-            addFavourite={addFavourite}
-            removeFavourite={removeFavourite}
-          />
-        </div>
+        <SearchResults
+          results={results}
+          error={error}
+          isFavourite={isFavourite}
+          addFavourite={addFavourite}
+          removeFavourite={removeFavourite}
+        />
       </main>
     </div>
   );

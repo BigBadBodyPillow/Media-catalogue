@@ -27,7 +27,7 @@ export default function SearchBar({
   tokenLoading,
 }) {
   return (
-    <div className="search-container">
+    <section className="search-container">
       <div className="input-group">
         <input
           type="text"
@@ -43,6 +43,7 @@ export default function SearchBar({
           value={mediaType}
           onChange={(e) => setMediaType(e.target.value)}
           disabled={!jwtToken || tokenLoading}
+          aria-label="Select media type for search"
         >
           {MEDIA_TYPES.map((type) => (
             <option key={type.value} value={type.value}>
@@ -59,6 +60,6 @@ export default function SearchBar({
           {loading ? 'Searching...' : 'Search'}
         </button>
       </div>
-    </div>
+    </section>
   );
 }

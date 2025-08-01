@@ -8,7 +8,7 @@ export default function SearchResults({
   removeFavourite,
 }) {
   return (
-    <div className="search-results-container col-md">
+    <section className="search-results-container col-md">
       {error && <div className="alert text-center">{error}</div>}
       <div className="row g-3 results-container">
         {results.map((item) => (
@@ -21,6 +21,6 @@ export default function SearchResults({
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
